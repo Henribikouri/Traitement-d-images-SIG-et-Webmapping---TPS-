@@ -35,3 +35,28 @@ Le projet est organisé de manière modulaire pour faciliter l'exécution et le 
 Le projet nécessite un environnement Python 3 avec les bibliothèques suivantes :
 ```bash
 pip install -r requirements.txt
+```
+---
+
+## 🧪 Protocole de Test & Validation
+
+### 1. Préparation des Données
+Avant de lancer les scripts, assurez-vous que vos images de test sont placées dans le dossier racine `entree/`. Les scripts sont configurés par défaut pour lire :
+* `entree/henri1.png` (ou format .jpg/ .pgm)
+* `entree/henri2.png` (pour les opérations arithmétiques du Chapitre 2)
+
+### 2. Flux de Traitement (Workflow)
+Chaque TP suit un cycle d'exécution standardisé :
+1. **Chargement** : Lecture du fichier depuis `/entree`.
+2. **Prétraitement** : Conversion systématique en niveaux de gris (pour les algos de contours/segmentation).
+3. **Traitement** : Application de l'algorithme (ex: Transformation de Fourier ou Seuil d'Otsu).
+4. **Visualisation** : Affichage via une fenêtre interactive Matplotlib.
+5. **Sauvegarde** : Exportation automatique du résultat dans le dossier `sortie/` du chapitre concerné.
+
+
+
+### 3. Exemple de Test : Détection de Contours (Chapitre 5)
+Pour vérifier la robustesse de l'algorithme de Sobel :
+```bash
+# Se placer à la racine du projet
+python Chap5/tp5sobel.py
