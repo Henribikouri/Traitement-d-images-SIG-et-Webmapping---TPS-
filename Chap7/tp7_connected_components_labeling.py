@@ -6,7 +6,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import os
 
-
+##henri
 output_dir = 'Chap7/sortie'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
